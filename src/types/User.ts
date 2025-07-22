@@ -14,9 +14,10 @@
 export interface User {
   name?: string;
   email?: string;
+  password?: string;
   mobile?: string;
   profilePic?: string;
-  role?: "student" | "mentor" | "admin";
+  role?: "student" | "admin";
   experience?: string;
   techStack?: string[]; // MUST be an array, not a string
   schedules?: string[];

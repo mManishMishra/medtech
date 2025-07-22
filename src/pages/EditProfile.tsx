@@ -109,10 +109,10 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({
           className="input-fx"
         >
           <option value="student">Student</option>
-          <option value="mentor">Mentor</option>
+          {/* <option value="mentor">Mentor</option> */}
         </select>
 
-        {formData.role === "mentor" && (
+        {formData.role === "admin" && (
           <>
             <input
               type="text"

@@ -90,36 +90,21 @@
 
 // // export default Login;
 
-const LoginUsers = [
+const LoginUsers: User[] = [
   {
     email: "admin@admin.com",
     password: "admin",
-    payload: {
-      name: "Admin User",
-      email: "admin@admin.com",
-      role: "admin",
-      token: "admin-token-123",
-    },
-  },
-  {
-    email: "mentor@mentor.com",
-    password: "mentor",
-    payload: {
-      name: "Mentor User",
-      email: "mentor@mentor.com",
-      role: "mentor",
-      token: "mentor-token-456",
-    },
+    name: "Admin User",
+    role: "admin",
+    token: "admin-token-123",
   },
   {
     email: "student@student.com",
     password: "student",
-    payload: {
-      name: "Student User",
-      email: "student@student.com",
-      role: "student",
-      token: "student-token-789",
-    },
+
+    name: "Student User",
+    role: "student",
+    token: "student-token-789",
   },
 ];
 
@@ -130,12 +115,13 @@ import { login } from "../redux/slices/authSlice";
 import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
+import { User } from "../types/User";
 
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [form, setForm] = useState({ email: "", password: "" });
-  const loginUrl = `${import.meta.env.VITE_PROD_URL}/api/login/`;
+  // const loginUrl = `${import.meta.env.VITE_PROD_URL}/api/login/`;
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -152,8 +138,8 @@ const Login = () => {
     setForm({ email: "", password: "" });
 
     if (matchedUser) {
-      dispatch(login(matchedUser.payload));
-      toast.success(`Welcome back, ${matchedUser.payload.name}! 🎉`);
+      dispatch(login(matchedUser));
+      toast.success(`Welcome back, ${matchedUser.name}! 🎉`);
       navigate("/profile");
     } else {
       toast.error("Oops. Invalid credentials, try again 🫠");

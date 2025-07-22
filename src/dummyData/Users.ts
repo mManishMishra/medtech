@@ -17,20 +17,6 @@ export const LoginUsers: {
     },
   },
   {
-    email: "mentor@mentor.com",
-    password: "mentor",
-    payload: {
-      name: "Maya Mentor",
-      email: "mentor@mentor.com",
-      role: "mentor",
-      token: "",
-      mobile: "9876543210",
-      experience: "5 years",
-      techStack: ["React, Node.js, MongoDB"],
-      profilePic: DummyPic, // can be a URL later
-    },
-  },
-  {
     email: "student@student.com",
     password: "student",
     payload: {

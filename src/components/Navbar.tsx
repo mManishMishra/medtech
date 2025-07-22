@@ -254,7 +254,7 @@ import SearchBox from "./Searchbox";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import defaultAvatar from "../assets/mentor4.jpg";
-import { path } from "framer-motion/client";
+// import { path } from "framer-motion/client";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -262,7 +262,7 @@ const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const { user } = useSelector((state: RootState) => state.auth);
   // const navigate = useNavigate();
-  const loggedUser = localStorage.getItem("token");
+  // const loggedUser = localStorage.getItem("token");
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 

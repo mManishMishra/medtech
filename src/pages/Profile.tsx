@@ -209,7 +209,7 @@ const UserProfile = () => {
             </div>
           )}
 
-          {role === "mentor" && (
+          {role === "admin" && (
             <>
               <p>
                 <strong>Experience:</strong> {experience} years

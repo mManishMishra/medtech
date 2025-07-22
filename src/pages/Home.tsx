@@ -3,12 +3,12 @@ import Slider from "../components/Slider";
 import SignUp from "./Signup";
 import OurPorgrams from "./OurPorgrams";
 import { useLimitedTimeOffer } from "../hooks/useLimitedTimeOffer";
-import OurMentor from "./OurMentor";
+// import OurMentor from "./OurMentor";
 import ContactUs from "./ContactUs";
-import WhatsNew from "./WhatsNew";
+// import WhatsNew from "./WhatsNew";
 import FlashCard from "../components/FlashCard";
-import FeaturedStory from "./FeaturedStory";
-import { HeroSection } from "./HeroSection";
+// import FeaturedStory from "./FeaturedStory";
+// import { HeroSection } from "./HeroSection";
 
 const Home = () => {
   const { OfferMarquee, OfferCard } = useLimitedTimeOffer();

@@ -1,6 +1,6 @@
 // src/components/HeroSlider.tsx
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import banner1 from "../assets/5211204.jpg";
 import GodHeader from "./GodHeader";
@@ -32,7 +32,7 @@ const slides = [
 
 const Slider = () => {
   const [current, setCurrent] = useState(0);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,8 +41,7 @@ const Slider = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const { image, heading, subHeading, paragraph, buttonText, route } =
-    slides[current];
+  const { image, heading, subHeading, paragraph } = slides[current];
 
   return (
     <div className="relative w-full h-[90vh] overflow-hidden">
